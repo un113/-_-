@@ -1,0 +1,45 @@
+{
+  "songs": [
+    {
+      "id": "track_kaeru",
+      "title": "カエルの歌",
+      "filename": "songs/カエルの歌.mid",
+      "tracks": [
+        {
+          "name": "パート1",
+          "defaultInstrument": "anomy_1",
+          "slotType": "anomy",
+          "spotImage": "images/spot1.png",
+          "x": 150,
+          "y": 150
+        },
+        {
+          "name": "パート2",
+          "defaultInstrument": "anomy_2",
+          "slotType": "anomy",
+          "spotImage": "images/spot2.png",
+          "x": 410,
+          "y": 150
+        }
+      ],
+      "availableInstruments": ["anomy_1", "anomy_2", "anomy_3"]
+    },
+    {
+      "id": "track_konpeitou",
+      "title": "こんぺいとうの踊り",
+      "filename": "songs/konpeitou.mid",
+      "bgm": "songs/konpeitou.mp3",
+      "tracks": [
+        {
+          "name": "可変メロディ",
+          "defaultInstrument": "anomy_1",
+          "slotType": "anomy",
+          "spotImage": "images/spot1.png",
+          "x": 280,
+          "y": 150
+        }
+      ],
+      "availableInstruments": ["anomy_1", "anomy_2", "anomy_3"]
+    }
+  ]
+}

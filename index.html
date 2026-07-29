@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Anomy Audio Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <script src="https://unpkg.com/@tonejs/midi"></script>
+</head>
+<body>
+<div id="game">
+    <div id="navButtons">
+        <button id="showPlayScreenBtn">演奏画面へ</button>
+        <button id="showGrowScreenBtn">育成画面へ</button>
+    </div>
+
+    <section id="playScreen" class="screen active">
+        <select id="songSelect"></select>
+        <div id="stage">
+            <img id="bg" src="images/haikei.png" alt="背景">
+            <div id="spotArea"></div>
+            <img id="playBtn" src="images/play.png" alt="再生">
+            <div id="bottomTab">
+                <img id="tab0" src="images/tab0.png" alt="タブ背景">
+                <div id="smallTabs">
+                    <img src="images/tab1.png" class="small-tab" data-filter="anomy">
+                    <img src="images/tab2.png" class="small-tab" data-filter="instrument">
+                    <img src="images/tab3.png" class="small-tab" data-filter="all">
+                </div>
+                <div id="iconTray"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="growScreen" class="screen">
+        <div id="growTargetSelector">
+            <button class="target-btn active" data-id="anomy_1">アノミー1を育てる</button>
+            <button class="target-btn" data-id="anomy_2">アノミー2を育てる</button>
+        </div>
+
+        <div id="growStage">
+            <img id="growAnomy" src="images/anomy1.png" alt="アノミー">
+            <img class="food-icon" src="images/food.png" alt="やわらか餌" data-stat="softness">
+            <img class="food-icon" src="images/food2.png" alt="ひびき餌" data-stat="echo">
+            <img class="food-icon" src="images/food3.png" alt="あかるさ餌" data-stat="brightness">
+        </div>
+
+        <div id="statsPanel">
+            <p><strong id="currentTargetName">アノミー1</strong> の能力値</p>
+            <p>softness：<span id="softnessValue">0</span></p>
+            <p>echo：<span id="echoValue">0</span></p>
+            <p>brightness：<span id="brightnessValue">0</span></p>
+            
+            <div id="growButtons">
+                <button id="testSoundBtn">今の音を確認する(デバッグ)</button>
+                <button id="resetStatsBtn">能力リセット</button>
+            </div>
+        </div>
+    </section>
+    <div id="statusLabel">準備中</div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
